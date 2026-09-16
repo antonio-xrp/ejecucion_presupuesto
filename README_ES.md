@@ -61,7 +61,7 @@ El siguiente análisis será respecto a la provincia de Huancayo y al distrito d
 
 El dashoard puedes encontrarlo en la siguiente página: 🔗 [ejecucionpresupuesto](https://ejecucionpresupuesto.streamlit.app/)
 
-![alt text](image-1.png)
+![Dashboard](figures/dashboard.png)
 
 ## 📁 Estructura del projecto
 
