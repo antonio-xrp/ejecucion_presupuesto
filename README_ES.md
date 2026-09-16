@@ -16,7 +16,7 @@ Aunque la información presupuestal es pública y se puede encontrar en platafor
 
 ## Resumen del proyecto
 
-El proyecto busca convertir datos públicos de presupuesto y ejecución en información que pueda ser explorada de forma más sencilla, enfocado en el usuario común y corriente. 
+El proyecto busca convertir datos públicos de presupuesto y ejecución [MEF](https://datosabiertos.mef.gob.pe/dataset/presupuesto-y-ejecucion-de-gasto/resource/d45f660d-6d14-438e-9d91-300084c9b85f) en información que pueda ser explorada de forma más sencilla, enfocado en el usuario común y corriente. 
 
 El análisis se centra principalmente en:
 
