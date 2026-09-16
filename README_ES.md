@@ -32,25 +32,145 @@ El análisis se centra principalmente en:
 - Ejecución acumulada
 - Comparación entre gobiernos locales (En Revisión)
 
-## Preguntas Claves
+## 🎯  Preguntas Claves
 
 El análisis fue diseñado para responder a las siguientes preguntas:
 
-- ¿Cuáles el presupuesto asignado a una provincia y distrito? 
-- ¿Cuánto es el porcentaje de ejecución del presupuesto (PIM) durante el año? 
+- ¿Cuánto es el presupuesto asignado de una provincia y distrito (PIA) en soles (S/)? 
+- ¿Cuánto es el presupuesto modificado de una provincia y distrito (PIM) en soles (S/)? 
+- ¿Cuánto es el devengando (gasto ejecutado) de una provincia y distrito? 
+- ¿Cuánto es el porcentaje de ejecución respecto al presupuesto modificado (PIM) durante el año? 
+- ¿Cuánto es el saldo pendiente de ejecución respecto al presupuesto modificado (PIM)?
 - ¿Cómo evoluciona el gasto durante el año?
-- ¿Cuál es el saldo pendiente de ejecución?
-- ... Aun desarrollando.
+- ¿Cúales son las 10 provincias y distritos que han ejecutado mejor el presupuesto modificado (PIM)?
+- ¿En qué áreas se ha ejecutado más presupuesto en proyectos?
 
-## Hallazgos claves
+## 💡 Hallazgos claves
+
+El siguiente análisis será respecto a la provincia de Huancayo y al distrito del Tambo respecto al mes de agosto del año 2026. 
+
+- El distrito del Tambo, uno de los distritos más importantes de la pronvicia de Huancayo, ha ejecutado cerca del 45% del Presupuesto Modificado (PIM). 
+
+- El distrito del Tambo ocupa el puesto 8 de 28 distritos respecto al porcentaje de ejecución respecto al Presupuesto Modificado (PIM)
+
+- El distrito del Tambo cuenta cerca de S/. 16.7 M para invertir en proyectos en lo que queda año.
+
+- El distrito del Tambo ha invertido más dinero *Saneamiento* con S/ 5.7 M, 
+
+> **Conclusión:** Al mes de agosto, El Tambo registra una ejecución presupuestal de 44.7% del PIM, manteniendo el 55.3% pendiente de ejecución. Este resultado requiere revisar el avance de los proyectos y los factores que pueden estar limitando la ejecución del presupuesto.
+
+## 📈 Dashboard
+
+El dashoard puedes encontrarlo en la siguiente página: 🔗 [ejecucionpresupuesto](https://ejecucionpresupuesto.streamlit.app/)
+
+![alt text](image-1.png)
+
+## 📁 Estructura del projecto
 
 
-## Dashboard
 
+```text
+.
+├── environment.yml
+├── figures
+│   └── dashboard.png
+├── projects
+│   └── 0.1_ejecucion_presupuesto
+│       ├── app
+│       │   ├── charts
+│       │   │   ├── bar.py
+│       │   │   └── line.py
+│       │   ├── components
+│       │   │   ├── __init__.py
+│       │   │   └── kpi.py
+│       │   ├── __init__.py
+│       │   ├── main.py
+│       │   ├── services
+│       │   │   ├── __init__.py
+│       │   │   └── presupuesto.py
+│       │   ├── styles
+│       │   │   └── kpi.css
+│       │   └── utils
+│       │       ├── data.py
+│       │       ├── format.py
+│       │       ├── __init__.py
+│       │       └── styles.py
+│       ├── data
+│       │   ├── interim
+│       │   ├── processed
+│       │   │   ├── ejecucion_mensual.parquet
+│       │   │   └── presupuesto.parquet
+│       │   └── raw
+│       │       └── 2026-Gasto-Mensual.csv
+│       ├── models
+│       └── notebooks
+│           ├── 0.1_presupuesto_ejecuciongasto.ipynb
+│           ├── hyo_provincia.csv
+│           ├── mef_2026_clean.parquet
+│           ├── mef_2026.parquet
+│           ├── ranking_gobiernos_regionales.png
+│           ├── regional_ejecucion.csv
+│           └── tipo_gastos_junin.csv
+├── README_ES.md
+├── README.md
+├── environment.yml
+└── shared
+    ├── data
+    │   └── __init__.py
+    ├── __init__.py
+    ├── utils
+    │   └── __init__.py
+    └── visualization
+        └── __init__.py
 
-## Estructura del projecto
+```
 
+## 👉 ¿Cómo ejecutar el proyecto?
 
+Clona el repositorio:
 
+```bash
+git clone https://github.com/antonio-xrp/ejecucion_presupuesto.git
+```
 
+Ingresa al directorio del proyecto:
 
+```bash
+cd ejecucion_presupuesto
+```
+
+Crea el entorno de Conda a partir del archivo `environment.yml`:
+
+```bash
+conda env create -f environment.yml
+```
+
+Activa el entorno:
+
+```bash
+conda activate data_analysis
+```
+
+Ejecuta el dashboard de Streamlit:
+
+```bash
+streamlit run projects/0.1_ejecucion_presupuesto/app/main.py
+```
+
+La aplicación se abrirá automáticamente en el navegador.
+
+Si no se abre automáticamente, accede a:
+
+```text
+http://localhost:8501
+```
+
+## 👨‍💻 Author
+
+**Antonio Palacios**
+
+**Ingenierio Industrial | Analista de datos | Científico de datos**
+
+- GitHub: [Antonio Palacios](https://github.com/antonio-xrp)
+- LinkedIn: [Antonio Palacios](https://www.linkedin.com/in/antonio-palacios-orihuela-xrp/)
+- correo: palaciosorihuelaantonio@gmail.com
