@@ -17,6 +17,9 @@ def crear_line_chart(
     xaxis_title: str | None = None,
     yaxis_title: str | None = None,
     legend_title: str | None = None,
+    legend_orientation : str,
+    legend_x : float,
+    legend_y : float,
     hovermode: str = "x unified",
     hovertemplate: str | None = None,
 ) -> go.Figure:
@@ -109,6 +112,16 @@ def crear_line_chart(
         yaxis_title=yaxis_title,
         legend_title=legend_title,
         hovermode=hovermode,
+
+        # LEYENDA 
+        legend_title_text=legend_title, 
+        legend=dict( 
+            orientation=legend_orientation, 
+            x=legend_x, 
+            y=legend_y, 
+            xanchor="left", 
+            yanchor="bottom", ),
+
     )
 
     # HOVER
