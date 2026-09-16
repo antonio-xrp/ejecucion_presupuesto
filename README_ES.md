@@ -8,8 +8,6 @@
 ![Static Badge](https://img.shields.io/badge/status-in_development-blue?logoColor=red&color=red)
 
 
-Estado:  🚧 En progreso (Hombres Trabajando!!!)
-
 ## Contexto
 
 Aunque la información presupuestal es pública y se puede encontrar en plataformas como [Transparencia economica Perú](https://apps5.mineco.gob.pe/transparencia/Mensual/default.aspx?y=2026&ap=Proyecto). Sin embargo, la consulta y exploración puede resultar engorroso a la hora de obtener datos de los gobiernos locales pues esta no esta no esta optimizada para el usuario final. 
